@@ -2,6 +2,13 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  // Set base path for GitHub Pages deployment
+  // For repository pages: /repo-name/
+  // For user/org pages: /
+  base: process.env.GITHUB_ACTIONS 
+    ? '/Cyclone-Awareness-Dashboard/' 
+    : (process.env.VITE_BASE_PATH || '/'),
+  
   plugins: [
     react({
       // Enable Fast Refresh
