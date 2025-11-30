@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* Base styles with responsive typography */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #111827;
+  overflow-x: hidden;
+}
+
+/* Ensure touch-friendly tap targets on mobile */
+@media (max-width: 768px) {
+  button,
+  a,
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on small screens */
+* {
+  max-width: 100%;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Support for 200% zoom without horizontal scroll */
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Focus visible styles for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Skip to main content link for screen readers */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1rem;
+  background-color: #3B82F6;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+
+.skip-to-main:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .severity-yellow {
+    background-color: #000000;
+    color: #FFFF00;
+    border: 2px solid #FFFF00;
+  }
+  
+  .severity-orange {
+    background-color: #000000;
+    color: #FFA500;
+    border: 2px solid #FFA500;
+  }
+  
+  .severity-red {
+    background-color: #000000;
+    color: #FF0000;
+    border: 2px solid #FF0000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.severity-indicator {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.severity-yellow {
+  background-color: #FCD34D;
+  color: #111827;
+}
+
+.severity-orange {
+  background-color: #FB923C;
+  color: #ffffff;
+}
+
+.severity-red {
+  background-color: #EF4444;
+  color: #ffffff;
+}
+
+.freshness-indicator {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+}
+
+.freshness-fresh {
+  background-color: #10B981;
+}
+
+.freshness-yellow {
+  background-color: #FCD34D;
+}
+
+.freshness-orange {
+  background-color: #FB923C;
+}
+
+.freshness-red {
+  background-color: #EF4444;
+}

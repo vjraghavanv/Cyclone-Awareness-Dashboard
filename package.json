@@ -1,0 +1,58 @@
+{
+  "name": "cyclone-awareness-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:prod": "tsc && vite build --mode production",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:properties": "vitest run tests/properties",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit",
+    "analyze": "vite build --mode production && npx vite-bundle-visualizer",
+    "optimize-assets": "node scripts/optimize-assets.js",
+    "pre-deploy": "node scripts/pre-deploy-check.js",
+    "fix-degradation": "node scripts/fix-service-degradation.js",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod"
+  },
+  "keywords": [
+    "cyclone",
+    "weather",
+    "dashboard",
+    "chennai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Real-time cyclone risk information dashboard for Chennai and surrounding districts",
+  "dependencies": {
+    "@types/leaflet": "^1.9.21",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-aria": "^3.44.0",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@vitest/ui": "^4.0.14",
+    "autoprefixer": "^10.4.22",
+    "fast-check": "^4.3.0",
+    "happy-dom": "^20.0.11",
+    "jsdom": "^27.0.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
+    "terser": "^5.44.1",
+    "vite": "^5.4.11",
+    "vitest": "^4.0.14"
+  }
+}

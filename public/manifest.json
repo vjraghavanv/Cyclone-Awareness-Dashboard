@@ -1,0 +1,23 @@
+{
+  "name": "Cyclone Awareness Dashboard",
+  "short_name": "Cyclone Dashboard",
+  "description": "Real-time cyclone risk information for Chennai and surrounding districts",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["weather", "utilities", "news"],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
